@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+# Termite
+Termite is a software emulation testbed that allows developers to run Android applications on virtual encounter networks.
 
-You can use the [editor on GitHub](https://github.com/etraudonun/termite/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+***
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Termite architecture
+For more information on Termite's architecture click [here](Termite Architecture).
 
-### Markdown
+### Termite API guide
+For a detailed guide on Termite's API click [here](Termite API Guide). If you want to access a particular feature of the Termite API, choose one of the sections bellow:
+* [Handle simulated WiFi Direct events](Simulated WiFi Events)
+* [Initialize the Termite API](Initialize API)
+* [Probing the network](Network Probing)
+* [Setting up TCP connections](Setup TCP Connections)
+* [Termination of the Termite service](Service Termination)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Tutorials
+To better understand how Termite works, we encourage you to try a set of tutorials presented here as a group of lessons.
+As you master each lesson, you'll be presented with increasingly harder challenges.
+By the end of lesson 5, you'll be familiar with all testing capabilities that Termite can offer you.
+If you're new to Termite start by lesson 1, otherwise skip to the lesson you need.
+* [Lesson 1 - Configuring Termite](Termite Configuration)
+* [Lesson 2 - Detecting devices with WiFi Direct](Device Detection)
+* [Lesson 3 - Simulating device movement](Simulating Movement)
+* [Lesson 4 - WiFi group formation and message exchange](WiFi Groups & Messages)
+* [Lesson 5 - Simulating WiFi groups](Simulating Groups)
 
-```markdown
-Syntax highlighted code block
+### DIY exercises
+At the end of some of the tutorial lessons, we encourage you to try some exercises covering the contents covered thus far. These exercises can be found [here](DIY).
 
-# Header 1
-## Header 2
-### Header 3
+### Useful tips
+If you want to know how to import the Termite API into your project or how to use the Genymotion connector, click [here](Useful Tips).
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/etraudonun/termite/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### FAQ
+For a list of frequently asked questions, click [here](FAQ).
