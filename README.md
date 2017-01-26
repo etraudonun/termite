@@ -8,6 +8,7 @@ For more information on Termite's architecture click [here](Termite Architecture
 
 ### Termite API guide
 For a detailed guide on Termite's API click [here](Termite API Guide). If you want to access a particular feature of the Termite API, choose one of the sections bellow:
+
 - [Handle simulated WiFi Direct events](Simulated WiFi Events)
 - [Initialize the Termite API](Initialize API)
 - [Probing the network](Network Probing)
@@ -19,6 +20,7 @@ To better understand how Termite works, we encourage you to try a set of tutoria
 As you master each lesson, you'll be presented with increasingly harder challenges.
 By the end of lesson 5, you'll be familiar with all testing capabilities that Termite can offer you.
 If you're new to Termite start by lesson 1, otherwise skip to the lesson you need.
+
 - [Lesson 1 - Configuring Termite](Termite Configuration)
 - [Lesson 2 - Detecting devices with WiFi Direct](Device Detection)
 - [Lesson 3 - Simulating device movement](Simulating Movement)
