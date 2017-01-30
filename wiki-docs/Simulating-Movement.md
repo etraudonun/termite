@@ -10,7 +10,7 @@ In case you have yet to meet these two requirements, we advise you to check [les
 ### Virtual network topology and states
 The virtual network topology chosen for this example is very simple. It comprises two nodes only: A and B. A is an Android device and B is a WiFi beacon. The nodes are firstly located apart from each other, and in a second state they become reachable within their respective WiFi signal ranges. We want to simulate this virtual network as depicted in the figure below such that by running PeerScanner on node A, B is not detected in State 1, but is detected in State 2:
 
-![](https://github.com/etraudonun/termite/blob/master/wiki-images/two-node-net.png)
+![](https://github.com/etraudonun/termite/blob/master/wiki-images/two-node-net.png?raw=true)
 
 ### Create the virtual nodes
 To create virtual nodes perform the following steps:
