@@ -23,8 +23,8 @@ body {
 }
 
 .image-bg-fixed-height {
-    background: url(../imgs/termite.png), linear-gradient(#eb01a5, #d13531);
-    height: 450px;
+    background: url(../imgs/termite.png), linear-gradient(#8c868a, #000000) no-repeat center center scroll;
+    height: 800px;
 }
 
 .img-center {
