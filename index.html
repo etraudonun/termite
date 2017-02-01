@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Termite</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a href="https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="https://etraudonun.github.io/termite/">App Developer</a>
+                    </li>
+                    <li>
+                        <a href="#services">Termite Developer</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="image-bg-fixed-height">
+        <!-- <img class="img-responsive img-center" src="imgs/emus.jpg" alt=""> -->
+    </header>
+
+
+
+    <!-- About Section -->
+    <section id="overview" class="container content-section text-center">
+
+        <h1 style="margin-top: 40px; margin-bottom: 20px">Termite: Emulation Testbed for Encounter Networks</h1>
+
+        <div class="row">
+
+        <p class="lead">
+            Termite is a <strong>software emulation testbed</strong> that allows developers to run Android applications on <strong>virtual encounter networks</strong>.
+            Simulating network connectivity scenarios while developing Android applications is a cumbersome task.
+            Either by testing with real devices or emulators, developers are offen <strong>forced to toggle network settings</strong> in order to mimic scenarios such as device entrance or exit of a WiFi group range.
+            To address this issue, Termite offers Android application developers an easy to use testbed for network testing on emulators.
+            Through a virtual device management console, developers can <strong>simulate the creation of WiFi groups as well as movement of these devices</strong> inwards or outwards of these groups. 
+            <!-- <a href="http://www.apache.org/">Apache</a> Groovy is a <strong>powerful</strong>, <strong>optionally typed</strong> and <strong>dynamic</strong>
+            language, with <strong>static-typing and static compilation</strong> capabilities, for the Java platform
+            aimed at improving developer productivity thanks to a concise, <strong>familiar and easy to learn
+            syntax</strong>. It integrates smoothly with any Java program, and immediately delivers to your application
+            powerful features, including scripting capabilities, <strong>Domain-Specific Language</strong> authoring,
+            runtime and compile-time <strong>meta-programming</strong> and <strong>functional</strong> programming. -->
+        </p>
+
+        </div>
+    </section>
+
+    <section class="container content-section text-center">
+
+        <hr class="featurette-divider">
+        <h1 style="margin-bottom: 80px; margin-top: -50px">What does Termite offer?</h1>
+
+    </section>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        
+
+        
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-responsive pull-right" src="imgs/deorganization.png">
+            <h2 class="featurette-heading">Say Goodbye to Caos
+                <span class="text-muted"><font size="6">Seamless Device Movement Simulation</font></span>
+            </h2>
+            <p class="lead">With Termite, you don't need to manually change the network settings of your emulators to simulate WiFi device group entrance and exits, when testing your Android application.
+                Thanks to Termite's easy to use scripts, you can create the cyclic network changes most suited to fit your application's testing scenarios.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <img class="featurette-image img-responsive pull-left" src="imgs/console.png">
+            <h2 class="featurette-heading">Always in Control<br>
+                <span class="text-muted"><font size="6">Virtual Device Management Console</font></span>
+            </h2>
+            <p class="lead">Termite features a terminal console that allows you to manage the network state of your emulators.
+            Through this console, you can simulate the formation of WiFi groups between your emulators, as well as configuring network properties allowing your emulators to communicate as if they were using WiFi.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-responsive pull-right" src="imgs/studio.png">
+            <h2 class="featurette-heading">Effortless Integration<br>
+                <span class="text-muted"><font size="6">Android Compatible Library Integration</font></span>
+            </h2>
+            <p class="lead">To allow your Android application to simulate WiFi communication when testing on emulators, you simply need to package your application with Termite's Android library.
+            Then, setup the library and test the various network availability scenarios you wish your application to support.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
