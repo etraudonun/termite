@@ -25,7 +25,7 @@ body {
 .image-bg-fixed-height {
     margin-top: 40px;
     background: url(../imgs/termite.png) no-repeat center center scroll , linear-gradient(#8c868a, #000000);
-    background-size: cover;
+    background-size: 50%;
     height: 360px;
 }
 
