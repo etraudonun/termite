@@ -33,7 +33,7 @@ try {
 }
 //...
 try {
-   mCliSocket.getOutputStream().write("Hello World\\n");
+   mCliSocket.getOutputStream().write("Hello World\n");
 } catch (IOException e) {
    Log.d("Error reading socket:", e.getMessage());
 }
