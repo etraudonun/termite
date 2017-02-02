@@ -16,6 +16,7 @@ initialization steps:
 ```
 
 * **Initialize the Termite Socket Manager**
+
    ```java
    // initialize the Termite API
    SimWifiP2pSocketManager.Init(getApplicationContext());
