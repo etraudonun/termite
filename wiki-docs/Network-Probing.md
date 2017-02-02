@@ -18,7 +18,8 @@ calling device and about the devices that are connected to the same groups. Both
 immediately and the results are propagated to the application using listener classes, which looks like this:
 
 ```java
-mManager.requestPeers(mChannel, (PeerListListener) SimpleChatActivity.this);
+mManager.requestPeers(mChannel, (PeerListListener)
+     SimpleChatActivity.this);
 //...
 @Override
 public void onPeersAvailable(SimWifiP2pDeviceList peers) {
@@ -29,11 +30,12 @@ public void onPeersAvailable(SimWifiP2pDeviceList peers) {
 And this is what the listener looks like for for the second callback:
 
 ```java
-mManager.requestGroupInfo(mChannel, (GroupInfoListener) SimpleChatActivity.this);
+mManager.requestGroupInfo(mChannel, (GroupInfoListener)
+     SimpleChatActivity.this);
 //...
 @Override
 public void onGroupInfoAvailable(SimWifiP2pDeviceList devices,
-   SimWifiP2pInfo groupInfo) {
+     SimWifiP2pInfo groupInfo) {
    //...
 }
 ```
@@ -47,7 +49,7 @@ Callbacks and broadcast receiver methods return their results in two classes: `S
    Returns the name of the device, identification that corresponds to the device name contained in
 the topology file.
 
-* **[SimWifiP2pInfo] Set<String> getDevicesInNetwork()**
+* **[SimWifiP2pInfo] Set\<String\> getDevicesInNetwork()**
 
    Returns the name of the devices that are in the same network of the calling device. It will include
 the name of the devices registered in all the P2P groups of which the home device is client or
@@ -74,7 +76,7 @@ This class uses the names of the devices as IDs. To translate this information t
 which is necessary for setting up TCP connections, we must use the instances of the
 SimWifiP2pDeviceList, which contain device descriptors (class SimWifiP2pDevice).
 
-* **[SimWifiP2pDeviceList] Collection<SimWifiP2pDevice> getDeviceList()**
+* **[SimWifiP2pDeviceList] Collection\<SimWifiP2pDevice\> getDeviceList()**
 
    Returns the list of devices. This list includes different sets of devices depending on the callback
 method that returns the instance of this class. The instance returned by the requestPeers
