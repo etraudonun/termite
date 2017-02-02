@@ -10,7 +10,8 @@ initialization steps:
    <application
    ...
       <service
-         android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+         android:name="pt.inesc.termite.wifidirect.service.
+              SimWifiP2pService" />
    </application>
 </manifest>
 ```
@@ -28,9 +29,12 @@ SimWifiP2pSocketManager.Init(getApplicationContext());
 IntentFilter filter = new IntentFilter();
 filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_STATE_CHANGED_ACTION);
 filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_PEERS_CHANGED_ACTION);
-filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION);
-filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION);
-SimWifiP2pBroadcastReceiver receiver = new SimWifiP2pBroadcastReceiver(this);
+filter.addAction(SimWifiP2pBroadcast.
+     WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION);
+filter.addAction(SimWifiP2pBroadcast.
+     WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION);
+SimWifiP2pBroadcastReceiver receiver = 
+     new SimWifiP2pBroadcastReceiver(this);
 registerReceiver(receiver, filter);
 ```
 
@@ -54,10 +58,12 @@ private Messenger mService = null;
 private ServiceConnection mConnection = new ServiceConnection() {
 // callbacks for service binding, passed to bindService()
    @Override
-   public void onServiceConnected(ComponentName className, IBinder service) {
+   public void onServiceConnected(ComponentName className,
+        IBinder service) {
       mService = new Messenger(service);
       mManager = new SimWifiP2pManager(mService);
-      mChannel = mManager.initialize(getApplication(), getMainLooper(), null);
+      mChannel = mManager.initialize(getApplication(), getMainLooper(),
+         null);
       //...
    }
     @Override
