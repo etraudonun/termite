@@ -39,7 +39,8 @@ public void onReceive(Context context, Intent intent) {
    * **Service declaration:** If you take a look at the application's manifest, you'll find that PeerScanner features Termite's service as one of its components. Keep in mind that this declaration is essential in allowing your application to work with Termite.
    
 ```xml
-<service android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+<service android:name="pt.inesc.termite.wifidirect.service.
+   SimWifiP2pService" />
 ```
 
    * **Activity creation:** PeerScanner's activity creation code features two parts: the initialization of UI elements, and the registration of the broadcast receiver, through which, as explained, WiFi Direct configuration change notifications from Termite can be shown.
