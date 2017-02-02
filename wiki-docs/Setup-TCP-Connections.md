@@ -10,7 +10,8 @@ try {
    mSrvSocket = new SimWifiP2pSocketServer(10001);
    SimWifiP2pSocket sock = mSrvSocket.accept();
    ///...
-   sockIn = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+   sockIn = new BufferedReader(
+      new InputStreamReader(sock.getInputStream()));
    String s = sockIn.readLine();
    //...
 } catch (IOException e) {
@@ -24,7 +25,7 @@ The client side looks like this:
 SimWifiP2pSocket mCliSocket = null;
 ///...
 try {
-   mCliSocket = new SimWifiP2pSocket(“192.168.0.2”,10001);
+   mCliSocket = new SimWifiP2pSocket("192.168.0.2",10001);
 } catch (UnknownHostException e) {
    return "Unknown Host:" + e.getMessage();
 } catch (IOException e) {
@@ -32,7 +33,7 @@ try {
 }
 //...
 try {
-   mCliSocket.getOutputStream().write(“Hello World\n”);
+   mCliSocket.getOutputStream().write("Hello World\\n");
 } catch (IOException e) {
    Log.d("Error reading socket:", e.getMessage());
 }
