@@ -20,13 +20,17 @@ Now that you setted up PeerScanner, lets take a careful look at its internals:
 @Override
 public void onReceive(Context context, Intent intent) {
     String action = intent.getAction();
-    if (SimWifiP2pBroadcast.WIFI_P2P_STATE_CHANGED_ACTION.equals(action)) {
+    if (SimWifiP2pBroadcast.
+       WIFI_P2P_STATE_CHANGED_ACTION.equals(action)) {
     //...
-    } else if (SimWifiP2pBroadcast.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)) {
+    } else if (SimWifiP2pBroadcast.
+       WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)) {
     //...
-    } else if (SimWifiP2pBroadcast.WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION.equals(action)) {
+    } else if (SimWifiP2pBroadcast.
+       WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION.equals(action)) {
     //...
-    } else if (SimWifiP2pBroadcast.WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION.equals(action)) {
+    } else if (SimWifiP2pBroadcast.
+       WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION.equals(action)) {
      //...
     }
 }
@@ -34,113 +38,113 @@ public void onReceive(Context context, Intent intent) {
 
    * **Service declaration:** If you take a look at the application's manifest, you'll find that PeerScanner features Termite's service as one of its components. Keep in mind that this declaration is essential in allowing your application to work with Termite.
    
-   ```xml
-   <service android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
-   ```
+```xml
+<service android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+```
 
    * **Activity creation:** PeerScanner's activity creation code features two parts: the initialization of UI elements, and the registration of the broadcast receiver, through which, as explained, WiFi Direct configuration change notifications from Termite can be shown.
    
-   ```java
-   @Override
-   public void onCreate(Bundle savedInstanceState) {
-	   super.onCreate(savedInstanceState);
+```java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+   super.onCreate(savedInstanceState);
    		
-	   // initialize the UI
-	   setContentView(R.layout.main);
-	   guiSetButtonListeners();
-	   guiUpdateInitState();
+   // initialize the UI
+   setContentView(R.layout.main);
+   guiSetButtonListeners();
+   guiUpdateInitState();
 
-	   // register broadcast receiver
-	   IntentFilter filter = new IntentFilter();
-	   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_STATE_CHANGED_ACTION);
-	   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_PEERS_CHANGED_ACTION);
-	   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION);
-	   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION);
-	   mReceiver = new SimWifiP2pBroadcastReceiver(this);
-	   registerReceiver(mReceiver, filter);
-   }
+   // register broadcast receiver
+   IntentFilter filter = new IntentFilter();
+   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_STATE_CHANGED_ACTION);
+   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_PEERS_CHANGED_ACTION);
+   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_NETWORK_MEMBERSHIP_CHANGED_ACTION);
+   filter.addAction(SimWifiP2pBroadcast.WIFI_P2P_GROUP_OWNERSHIP_CHANGED_ACTION);
+   mReceiver = new SimWifiP2pBroadcastReceiver(this);
+   registerReceiver(mReceiver, filter);
+}
 ```
 
    * **Button listeners:** The buttons of PeerScannner's activity aim at controlling the state of the service responsible for communicating with Termite, and also to request the list of peers in range of the device through that same service.
    
-   ```java
-   private OnClickListener listenerWifiOnButton = new OnClickListener() {
-       public void onClick(View v){
-           Intent intent = new Intent(v.getContext(), SimWifiP2pService.class);
-           bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
-           mBound = true;
-           guiUpdateDisconnectedState();
+```java
+private OnClickListener listenerWifiOnButton = new OnClickListener() {
+    public void onClick(View v){
+        Intent intent = new Intent(v.getContext(), SimWifiP2pService.class);
+        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        mBound = true;
+        guiUpdateDisconnectedState();
+    }
+};
+
+private OnClickListener listenerWifiOffButton = new OnClickListener() {
+   public void onClick(View v){
+       if (mBound) {
+           unbindService(mConnection);
+           mBound = false;
+           guiUpdateInitState();
        }
-   };
+   }
+};
 
-   private OnClickListener listenerWifiOffButton = new OnClickListener() {
-	   public void onClick(View v){
-	       if (mBound) {
-	           unbindService(mConnection);
-	           mBound = false;
-	           guiUpdateInitState();
-	       }
-	   }
-   };
+private OnClickListener listenerInRangeButton = new OnClickListener() {
+   public void onClick(View v){
+       if (mBound) {
+           mManager.requestPeers(mChannel, PeerScannerActivity.this);
+       } else {
+           Toast.makeText(v.getContext(), "Service not bound",
+             Toast.LENGTH_SHORT).show();
+       }
+   }
+};
 
-   private OnClickListener listenerInRangeButton = new OnClickListener() {
-	   public void onClick(View v){
-	       if (mBound) {
-	           mManager.requestPeers(mChannel, PeerScannerActivity.this);
-	       } else {
-	           Toast.makeText(v.getContext(), "Service not bound",
-	               Toast.LENGTH_SHORT).show();
-	       }
-	   }
-   };
-
-   private ServiceConnection mConnection = new ServiceConnection() {
+private ServiceConnection mConnection = new ServiceConnection() {
    // callbacks for service binding, passed to bindService()
 
-	   @Override
-	   public void onServiceConnected(ComponentName className, IBinder service) {
-	       mManager = new SimWifiP2pManager(new Messenger(service));
-	       mChannel = mManager.initialize(getApplication(), getMainLooper(), null);
-	       mBound = true;
-	   }
+   @Override
+   public void onServiceConnected(ComponentName className, IBinder service) {
+       mManager = new SimWifiP2pManager(new Messenger(service));
+       mChannel = mManager.initialize(getApplication(), getMainLooper(), null);
+       mBound = true;
+   }
 
-	   @Override
-	   public void onServiceDisconnected(ComponentName arg0) {
-	       mManager = null;
-	       mChannel = null;
-	       mBound = false;
-	   }
-   };
-   ```
+   @Override
+   public void onServiceDisconnected(ComponentName arg0) {
+       mManager = null;
+       mChannel = null;
+       mBound = false;
+   }
+};
+```
 
    * **Peer list listener:** Note that in order for an activity to be notified of peer detection by the Termite dedicated service, it must implement the `PeerListListener` interface, more specifically the `void onPeersAvailable(SimWifiP2pDeviceList peers)` method. In PeerScanner's activity, the method is implemented in a way that displays the list of nearby devices to the user through a system dialog. For a detailed description on the information made available by Termite's API, click [here](Network Probing).
    
-   ```java
-   public class PeerScannerActivity extends Activity implements PeerListListener {
-      //...
-      @Override
-      public void onPeersAvailable(SimWifiP2pDeviceList peers) {
-         StringBuilder peersStr = new StringBuilder();
-		
-         // compile list of devices in range
-         for (SimWifiP2pDevice device : peers.getDeviceList()) {
-            String devstr = "" + device.deviceName + " (" + device.getVirtIp() + ")\n";
-            peersStr.append(devstr);
-         }
+```java
+public class PeerScannerActivity extends Activity implements PeerListListener {
+   //...
+   @Override
+   public void onPeersAvailable(SimWifiP2pDeviceList peers) {
+      StringBuilder peersStr = new StringBuilder();
 
-         // display list of devices in range
-         new AlertDialog.Builder(this)
-         .setTitle("Devices in WiFi Range")
-         .setMessage(peersStr.toString())
-         .setNeutralButton("Dismiss", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-               }
-         })
-         .show();
+      // compile list of devices in range
+      for (SimWifiP2pDevice device : peers.getDeviceList()) {
+         String devstr = "" + device.deviceName + " (" + device.getVirtIp() + ")\n";
+         peersStr.append(devstr);
       }
-      //...
+
+      // display list of devices in range
+      new AlertDialog.Builder(this)
+      .setTitle("Devices in WiFi Range")
+      .setMessage(peersStr.toString())
+      .setNeutralButton("Dismiss", new DialogInterface.OnClickListener() {
+         public void onClick(DialogInterface dialog, int which) {
+         }
+      })
+      .show();
    }
-   ```
+   //...
+}
+```
 
 Now that you know how an application can interact with Termite, try a simple test interaction in [lesson 3](Simulating Movement).
 
