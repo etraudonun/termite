@@ -3,16 +3,16 @@ Before using the specific services of the Termite API, an application must perfo
 initialization steps:
 
 * **Update the manifest to launch the Termite service**
-   ```xml
-   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      ...
-      <application
-      ...
-         <service
-            android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
-      </application>
-   </manifest>
-   ```
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   ...
+   <application
+   ...
+      <service
+         android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+   </application>
+</manifest>
+```
 
 * **Initialize the Termite Socket Manager**
    ```java
