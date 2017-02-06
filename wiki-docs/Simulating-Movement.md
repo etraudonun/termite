@@ -6,6 +6,7 @@ During this lesson we assume you have Termite up and running, and have already r
 In case you have yet to meet these two requirements, we advise you to check [lesson 1](Termite Configuration) and [lesson 2](Device Detection) to meet these requirements respectively.
 
 In short, you'll need the Termite client running, as well as an Android emulator running the PeerScanner application.
+
 Next we present a simple topology we'll use throughout this lesson.
 
 ***
