@@ -1,6 +1,8 @@
 # Lesson 1 - Configuring Termite
 In this lesson we're going to learn how to configure Termite.
 
+Note that throught this lesson we provide information on how to configure Termite on three different platforms, namely: Windows, Linux, and Mac.
+
 
 ***
 
