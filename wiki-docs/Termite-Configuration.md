@@ -29,7 +29,7 @@ To install Termite, perform the following steps:
 }
 ```
 
-3 - You need to update the attributes `sdk` and `vmi`. The `sdk` attribute must be updated with the correct Android SDK path. A simple way to determine this is by opening Android Studio and opening the project settings. (Note: on Windows, you must write the SDK path using doubled backslashes, e.g., `c:\\my\\path\\to\\sdk`.)
+3 - You need to update the attributes `sdk` and `vmi`. The `sdk` attribute must be updated with the correct Android SDK path. A simple way to determine this is by opening Android Studio and opening the project settings. (Note: on Windows, you must write the SDK path using doubled backslashes, (e.g., `c:\\my\\path\\to\\sdk`).
 
 4 - For now ignore the `vmi` attribute.
 
