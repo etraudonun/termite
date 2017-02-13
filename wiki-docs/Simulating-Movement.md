@@ -20,12 +20,14 @@ The virtual network topology chosen for this example is very simple. It comprise
 To create virtual nodes perform the following steps:
 
 1 - On Termite, create two virtual devices, one for A, and other for B, by executing the command `newdevice`.
+
 ```
 avd:simplechat> newdevice A
 avd:simplechat> newdevice B
 ```
 
 2 - List the devices of the current virtual network with the `list` command.
+
 ```
 avd:simplechat> list devices
 A 0.0.0.0:1 0.0.0.0:1 0.0.0.0:1
@@ -40,14 +42,17 @@ Associate the Android emulator that will run the PeerScanner application to node
 1 - Make sure that one Android emulator is running.
 
 2 - Check that Termite detects that emulator is running by executing the command `list emus`:
+
 ```
 avd:simplechat> list emus
 e1 => online
     name: emulator-5554
 ```
+
 Then, it is necessary to configure the network addresses of the emulator. In order for the PeerScanner application to be able to communicate with other virtual devices and for the Termite client to communicate with the emulators, it is necessary to perform some port redirection operations. The Termite client can help in this task:
 
 3 - Assign network addresses to each emulator individually using the `assignaddr` command as follows:
+
 ```
 avd:simplechat> assignaddr e1
 avd:simplechat> list emus
@@ -59,6 +64,7 @@ e1 => netok
 From this listing, what is important to understand for now is the `avaddr` attribute which means: application virtual address. Essentially these are the virtual addresses that Termite emulates for the application running on this particular emulator. For example, for emulator-5554, the virtual IP address seen by the application is 192.168.0.1, and the port number where the application will be listening is 10001. The PeerScanner application will be listening for connections on this port. These addresses are specified in the Termite configuration file `etc/netprofiles.conf`.
 
 4 - Bind the emulator to the virtual device A using the `binddevice` command as illustrated next:
+
 ```
 avd:simplechat> binddevice A e1
 avd:simplechat> list devices
@@ -76,6 +82,7 @@ To emulate the virtual network and simulate device movement perform the followin
 2 - Press the "WiFi On" button to start the Termite service on the application.
 
 3 - On the Termite console, execute the `ping` command and verify that the node is online:
+
 ```
 avd:simplechat> ping
 A 127.0.0.1 9011  ONLINE
@@ -92,6 +99,7 @@ From the Termite client, it is possible to modify the topology of the network by
 1 - Make sure that the emulator is visible while you execute the following commands, so that you can see the notifications from them resulting.
 
 2 - Use the commands `move [nodeA] ([nodeB])` and `list neighbors` to "move" the node and check devices' relationships with neighbors:
+
 ```
 avd:simplechat> move A (B)
 avd:simplechat> list neighbors
@@ -102,6 +110,7 @@ B => A
 Note that while performing the sequence of commands above, the changes to the virtual network topology are performed locally in the termite console only. 
 
 3 - In order to propagate the topology information to the nodes use the `commit` command after `move [nodeA] ([nodeB])`:
+
 ```
 avd:simplechat> commit
 A 127.0.0.1 9011  SUCCESS
