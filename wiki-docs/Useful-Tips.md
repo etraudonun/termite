@@ -9,6 +9,7 @@ In order to use the Termite API in your project, perform the following steps:
 1 - Unzip the library file [Termite-WifiP2P-API-20160329.tgz](http://www.gsd.inesc-id.pt/~wiki/courses/cmu1516/lab04/Termite-WifiP2P-API-20160329.tgz) into the subdirectory `libs` of your project (e.g., `MyProject/app/libs`).
 
 2 - Add the following code in your file `MyProject/app/build.gradle`:
+
 ```
 dependencies {
   compile(name:'Termite-WifiP2P-API', ext:'aar')
