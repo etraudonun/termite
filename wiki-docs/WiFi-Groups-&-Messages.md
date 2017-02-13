@@ -143,7 +143,7 @@ public class MsgSenderActivity extends Activity implements
       for (String deviceName : groupInfo.getDevicesInNetwork()) {
          SimWifiP2pDevice device = devices.getByName(deviceName);
          String devstr = "" + deviceName + " (" + 
-             ((device == null)?"??":device.getVirtIp()) + ")\n";
+             ((device == null) ? "??" : device.getVirtIp()) + ")\n";
          peersStr.append(devstr);
       }
 
