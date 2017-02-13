@@ -58,7 +58,7 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
    }
 ```
 
-      * The `OutgoingCommTask` opens a connection to another device, renders the result of the operation on the activity's output TextView element, and sets the state of the activity's buttons:
+  * The `OutgoingCommTask` opens a connection to another device, renders the result of the operation on the activity's output TextView element, and sets the state of the activity's buttons:
       
 ```java
    public class OutgoingCommTask extends AsyncTask<String, Void, String> {
@@ -98,7 +98,7 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
    }
 ```
 
-      * The `SendCommTask` uses the socket previously opened by the `OutgoingCommTask` to send the message to the intended device, and it sets the state of the activity's buttons:
+   * The `SendCommTask` uses the socket previously opened by the `OutgoingCommTask` to send the message to the intended device, and it sets the state of the activity's buttons:
       
 ```java
    public class SendCommTask extends AsyncTask<String, String, Void> {
