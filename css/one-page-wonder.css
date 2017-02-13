@@ -203,3 +203,8 @@ footer {
     top: -50px;
     visibility: hidden;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
