@@ -39,16 +39,20 @@ Run Termite by performing the following steps:
 1 - Open a terminal window and navigate to directory `Termite-Cli`.
 
 2 - Set the environment variables `TERMITE_CLI_PATH` to point to the location of the Termite CLI module, i.e., this path, and `TERMITE_PLATFORM` to the platform's name.
+
    * In Linux or Mac OS:
+   
       * Update file `etc/platform/{linux,mac}/env_setup.sh` and then, on the terminal window, execute the command: `source etc/platform/{linux,mac}/env_setup.sh`. Naturally, you can also create your own "env" file.
       * In that same file, setup the environment variable `TERMITE_PLATFORM` to either: `linux`, or `mac`.
       * To execute the Termite client, run the script ./termite.sh.
+      
    * On Windows:
       * Use the command `set TERMITE_CLI_PATH=...`.
       * Use the command `set TERMITE_PLATFORM=windows`.
       * To execute the Termite client, run the batch file `termite.bat`.
 
 3 - Run the Termite client:
+
    * In Linux or Mac OS:
       * Run the script `termite.sh`.
    * On Windows:
