@@ -64,6 +64,7 @@ To delete the group, perform the following steps:
 1 - Make sure that both emulators are visible while you execute the following commands, so that you can see the notifications from them resulting.
 
 2 - Delete the group using the `deletegroup` command, and propagate the changes to the nodes:
+
 ```
 avd:simplechat> deletegroup A
 avd:simplechat> commit
@@ -76,6 +77,7 @@ A 127.0.0.1 9011  SUCCESS
 It is also possible to emulate nodes moving away and leaving the group without explicitly destroying the group. 
 
 4 - To test this, recreate the group:
+
 ```
 avd:simplechat> creategroup A (B)
 avd:simplechat> list groups
