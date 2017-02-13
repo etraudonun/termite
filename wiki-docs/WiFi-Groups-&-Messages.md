@@ -22,10 +22,12 @@ public class IncommingCommTask extends AsyncTask<Void, String, Void> {
 
    @Override
    protected Void doInBackground(Void... params) {			
-      Log.d(TAG, "IncommingCommTask started (" + this.hashCode() + ").");
+      Log.d(TAG, "IncommingCommTask started (" + this.hashCode() +
+          ").");
 
       try {
-         mSrvSocket = new SimWifiP2pSocketServer(Integer.parseInt(getString(R.string.port)));
+         mSrvSocket = new SimWifiP2pSocketServer(
+              Integer.parseInt(getString(R.string.port)));
       } catch (IOException e) {
          e.printStackTrace();
       }
@@ -34,7 +36,7 @@ public class IncommingCommTask extends AsyncTask<Void, String, Void> {
             SimWifiP2pSocket sock = mSrvSocket.accept();
             try {
                BufferedReader sockIn = new BufferedReader(
-                     new InputStreamReader(sock.getInputStream()));
+                   new InputStreamReader(sock.getInputStream()));
                String st = sockIn.readLine();
                publishProgress(st);
                sock.getOutputStream().write(("\n").getBytes());
@@ -106,7 +108,8 @@ public class SendCommTask extends AsyncTask<String, String, Void> {
    @Override
    protected Void doInBackground(String... msg) {
       try {
-         mCliSocket.getOutputStream().write((msg[0] + "\n").getBytes());
+         mCliSocket.getOutputStream().write(
+             (msg[0] + "\n").getBytes());
          BufferedReader sockIn = new BufferedReader(
              new InputStreamReader(mCliSocket.getInputStream()));
          sockIn.readLine();
