@@ -37,6 +37,7 @@ Genymotion is a Virtual Machine manager based on VirtualBox. It provides a simil
 6 - Check "Use virtual keyboard for input" on the virtual device's settings.
 
 7 - Create two clones of this virtual device image using the command line, as shown below:
+
 ```
 $ VBoxManage clonevm "TVD - 5.0.0 - API 21 - 768x1280" --name "TVD - 5.0.0 - API 21 - 768x1280-Clone0" --register
 $ VBoxManage clonevm "TVD - 5.0.0 - API 21 - 768x1280" --name "TVD - 5.0.0 - API 21 - 768x1280-Clone1" --register
