@@ -4,7 +4,7 @@ Termite is a software emulation testbed that allows developers to run Android ap
 ***
 
 ### Termite architecture
-For more information on Termite's architecture click [here](https://etraudonun.github.io/termite/wiki-docs/Termite-Architecture.html).
+For more information on Termite's architecture click [here](https://etraudonun.github.io/termite/architecture.html).
 
 ### Tutorials
 To better understand how Termite works, we encourage you to try a set of tutorials presented here as a group of lessons.
