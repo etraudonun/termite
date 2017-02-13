@@ -17,7 +17,7 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
 
       * The `IncommingCommTask` receives incoming connections and renders the message received on the activity's output TextView element:
       
-   ```java
+   ``java
    public class IncommingCommTask extends AsyncTask<Void, String, Void> {
 
       @Override
@@ -56,11 +56,11 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
          mTextOutput.append(values[0] + "\n");
       }
    }
-   ```
+   ``
 
       * The `OutgoingCommTask` opens a connection to another device, renders the result of the operation on the activity's output TextView element, and sets the state of the activity's buttons:
       
-   ```java
+   ``java
    public class OutgoingCommTask extends AsyncTask<String, Void, String> {
 
       @Override
@@ -96,11 +96,11 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
          }
       }
    }
-   ```
+   ``
 
       * The `SendCommTask` uses the socket previously opened by the `OutgoingCommTask` to send the message to the intended device, and it sets the state of the activity's buttons:
       
-   ```java
+   ``java
    public class SendCommTask extends AsyncTask<String, String, Void> {
 
       @Override
@@ -124,11 +124,11 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
          guiUpdateDisconnectedState();
       }
    }
-   ```
+   ``
 
    * **Group change listener:** In order for an activity to be notified of group change detections by the Termite dedicated service, it must implement the `GroupInfoListener` interface, more specifically the `void onGroupInfoAvailable(SimWifiP2pDeviceList devices, SimWifiP2pInfo groupInfo)` method. In MsgSender's activity, the method is implemented in a way that displays the new list of devices in the group after the last cast change, through a system dialog. For a detailed description on the information made available by Termite's API, click [here](Network Probing).
    
-   ```java
+   ``java
    public class MsgSenderActivity extends Activity implements PeerListListener, GroupInfoListener {
       //...
       @Override
@@ -155,7 +155,7 @@ Now that you setted up MsgSender, lets take a careful look at its internals:
       }
       //...
    }
-   ```
+   ``
 
 Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](Simulating Groups).
 
