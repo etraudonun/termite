@@ -12,6 +12,7 @@ We encourage you to use the most up-to-date version of [Android Studio](https://
 Yes, these two updates will be performed on the demo apps' configuration files, and they ensure compatibility with the most up-to-date Android Studio.
 
 **3 - When I execute the Termite script (or Termite bash file for Windows), I receive a `java.lang.UnsupportedClassVersionError` exception. How can I solve this?**
+
 ```
 nsantos@laptop:~/Termite-Cli$ ./termite.sh 
 Exception in thread "main" java.lang.UnsupportedClassVersionError: pt/inesc/termite/cli/Main : Unsupported major.minor version 52.0
@@ -29,9 +30,11 @@ Exception in thread "main" java.lang.UnsupportedClassVersionError: pt/inesc/term
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
 Could not find the main class: pt.inesc.termite.cli.Main.  Program will exit.
 ```
+
 Make sure your machine is running the most up-to-date version of JDK. Download it [here](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html).
 
 **4 - Should I ignore the following error when I execute the `assignaddr` command on the Termite client?**
+
 ```
 avd:simplechat> assignaddr e1
 Error: KO: bad redirection format, try (tcp|udp):hostport
@@ -40,12 +43,14 @@ Error: KO: bad redirection format, try (tcp|udp):hostport
 Yes.
 
 **5 - Should I ignore the following error when I execute the `assignaddr` command on the Termite client?**
+
 ```
 avd:simplechat> assignaddr e1
 Error: KO: unknown command, try 'help'
 ```
 
 No. This means ADB is not allowing Termite to perform the necessary port redirections. The problem is due to an authentication step required in the newer versions of Android Studio's emulators. In order to solve this issue, find the location of the authentication token file on your machine via telnet, and delete its contents. Here's an example in Linux, where the emulator's port is 5554:
+
 ```
 nsantos@laptop:~/Termite-Cli$ telnet localhost 5554
 Trying 127.0.0.1...
@@ -59,6 +64,7 @@ OK
 ```
 
 At this point, make a backup of the file and delete its contents:
+
 ```
 nsantos@laptop:~/Termite-Cli$ cp /home/nsantos/.emulator_console_auth_token /home/nsantos/.emulator_console_auth_token_ backup
 nsantos@laptop:~/Termite-Cli$ echo  > ~/.emulator_console_auth_token
