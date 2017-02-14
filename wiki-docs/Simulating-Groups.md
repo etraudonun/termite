@@ -46,6 +46,8 @@ To create groups perform the following steps:
 avd:simplechat> list groups
 A => B
 avd:simplechat> commit
+B 127.0.0.1 9021 SUCCESS
+A 127.0.0.1 9011 SUCCESS
 ```
 
 4 - Observe the toast messages reading "Network membership changed", and "Group owner changed" for node A.
@@ -83,6 +85,8 @@ avd:simplechat> creategroup A (B)
 avd:simplechat> list groups
 A => B
 avd:simplechat> commit
+B 127.0.0.1 9021 SUCCESS
+A 127.0.0.1 9011 SUCCESS
 ```
 
 5 - Observe the toast messages in both devices
