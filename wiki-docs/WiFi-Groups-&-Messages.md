@@ -1,6 +1,8 @@
 # Lesson 4 - WiFi group formation and message exchange
 In this lesson, we're going to demonstrate how to build Android applications that can set up WiFi groups and exchange messages. In order to do so, we will follow the idea of [lesson 2](Device Detection), and inspect the internals of a demo application called MsgSender. Note that this app extends the functionality of PeerScanner, the demo app from [lesson 2](Device Detection).
 
+For a visual representation of the interactions involved in this lesson, click [here](https://etraudonun.github.io/termite/group-management.html).
+
 ***
 
 ### Setup the MsgSender application
