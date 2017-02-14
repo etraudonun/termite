@@ -2,6 +2,8 @@
 In this lesson, we're going to demonstrate how to build Android applications that can detect the presence of nearby devices using WiFi Direct.
 In order to do so, we will inspect the internals of a demo application called PeerScanner.
 
+For a visual representation of the interactions involved in this lesson, click [here](https://etraudonun.github.io/termite/device-detection.html).
+
 ***
 
 ### Setup the PeerScanner application
