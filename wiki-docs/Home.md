@@ -1,6 +1,9 @@
 # Termite
 Termite is a software emulation testbed that allows developers to run Android applications on virtual encounter networks.
 
+Here you'll find documentation about the features that Termite offers to developers, as well as documentation on its API.
+This information is further explained with concrete examples that feature not only source code but also visual representation on the interactions between the entities involved in a Termite testing environment.
+
 ***
 
 ### Termite architecture
