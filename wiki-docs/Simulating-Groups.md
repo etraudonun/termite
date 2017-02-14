@@ -125,8 +125,8 @@ avd:simplechat> joingroup B (A)
 avd:simplechat> list groups
 A => B
 avd:simplechat> commit
-A 127.0.0.1 9011  SUCCESS
-B 127.0.0.1 9021  SUCCESS
+B 127.0.0.1 9021 SUCCESS
+A 127.0.0.1 9011 SUCCESS
 ```
 
 4 - Observe the toast messages in both devices
