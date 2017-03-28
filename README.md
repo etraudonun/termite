@@ -9,7 +9,7 @@ For more information on Termite's architecture click [here](https://etraudonun.g
 ### Termite API guide
 For a detailed guide on Termite's API click [here](https://etraudonun.github.io/termite/wiki-docs/Termite-API-Guide.html). If you want to access a particular feature of the Termite API, choose one of the sections bellow:
 
-- [Handle simulated WiFi Direct events](https://etraudonun.github.io/termite/wiki-docs/Simulated-WiFi-Events.html)
+- [Handle simulated WiFi Direct events]({{ site.url }}{{ site.baseurl }}/wiki-docs/Simulated-WiFi-Events.html)
 - [Initialize the Termite API](https://etraudonun.github.io/termite/wiki-docs/Initialize-API.html)
 - [Probing the network](https://etraudonun.github.io/termite/wiki-docs/Network-Probing.html)
 - [Setting up TCP connections](https://etraudonun.github.io/termite/wiki-docs/Setup-TCP-Connections.html)
