@@ -1,9 +1,9 @@
 # Lesson 3 - Simulating device movement
 In this lesson, we're going to test node movement on a virtual WiFi Direct network emulated on Termite.
-Based on a simple network topology, we're going to test the device detector Android application PeerScanner, covered in [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html), in detecting surrounding devices.
+Based on a simple network topology, we're going to test the device detector Android application PeerScanner, covered in [lesson 2](Device-Detection.html), in detecting surrounding devices.
 
 During this lesson we assume you have Termite up and running, and have already ran the PeerScanner application.
-In case you have yet to meet these two requirements, we advise you to check [lesson 1](https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html) and [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html) to meet these requirements respectively.
+In case you have yet to meet these two requirements, we advise you to check [lesson 1](Termite-Configuration.html) and [lesson 2](Device-Detection.html) to meet these requirements respectively.
 
 In short, you'll need the Termite client running, as well as an Android emulator running the PeerScanner application.
 
@@ -14,7 +14,7 @@ Next we present a simple topology we'll use throughout this lesson.
 ### Virtual network topology and states
 The virtual network topology chosen for this example is very simple. It comprises two nodes only: A and B. A is an Android device and B is a WiFi beacon. The nodes are firstly located apart from each other, and in a second state they become reachable within their respective WiFi signal ranges. We want to simulate this virtual network as depicted in the figure below such that by running PeerScanner on node A, B is not detected in State 1, but is detected in State 2:
 
-![](https://github.com/etraudonun/termite/blob/master/wiki-images/two-node-net.png?raw=true)
+![](../wiki-images/two-node-net.png?raw=true)
 
 ### Create the virtual nodes
 To create virtual nodes perform the following steps:
@@ -121,8 +121,8 @@ B 0.0.0.0 2 FAIL
 
 5 - Click on "In range" to see which peers are available.
 
-In the [following lesson](https://etraudonun.github.io/termite/wiki-docs/WiFi-Groups-&-Messages.html), we're going to address the concept of network, more specifically by showing how to create a group.
+In the [following lesson](WiFi-Groups-&-Messages.html), we're going to address the concept of network, more specifically by showing how to create a group.
 
-Meanwhile, we encourage you to try [some exercises](https://etraudonun.github.io/termite/wiki-docs/DIY.html#movement-simulation-exercises) covering this section.
+Meanwhile, we encourage you to try [some exercises](DIY.html#movement-simulation-exercises) covering this section.
 
 
