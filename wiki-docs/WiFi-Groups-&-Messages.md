@@ -165,4 +165,4 @@ public class MsgSenderActivity extends Activity implements
 
 Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
 
-**Note:** If you have yet to configure Termite, we suggest you to visit [lesson 1](https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html), before moving to [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
+**Note:** If you have yet to configure Termite, we suggest you to visit <a href="https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html">lesson 1</a>, before moving to [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
