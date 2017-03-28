@@ -69,4 +69,4 @@ avd:simplechat>
 ``` 
 Termite is now up and ready!
 
-Learn how Android applications can detect the presence of nearby devices using WiFi Direct with Termite, in [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html).
+Learn how Android applications can detect the presence of nearby devices using WiFi Direct with Termite, in [lesson 2](Device-Detection.html).
