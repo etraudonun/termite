@@ -131,7 +131,7 @@ public class SendCommTask extends AsyncTask<String, String, Void> {
 }
 ```
 
-   * **Group change listener:** In order for an activity to be notified of group change detections by the Termite dedicated service, it must implement the `GroupInfoListener` interface, more specifically the `void onGroupInfoAvailable(SimWifiP2pDeviceList devices, SimWifiP2pInfo groupInfo)` method. In MsgSender's activity, the method is implemented in a way that displays the new list of devices in the group after the last cast change, through a system dialog. For a detailed description on the information made available by Termite's API, click [here](Network Probing).
+   * **Group change listener:** In order for an activity to be notified of group change detections by the Termite dedicated service, it must implement the `GroupInfoListener` interface, more specifically the `void onGroupInfoAvailable(SimWifiP2pDeviceList devices, SimWifiP2pInfo groupInfo)` method. In MsgSender's activity, the method is implemented in a way that displays the new list of devices in the group after the last cast change, through a system dialog. For a detailed description on the information made available by Termite's API, click [here](https://etraudonun.github.io/termite/wiki-docs/Network-Probing.html).
    
 ```java
 public class MsgSenderActivity extends Activity implements
