@@ -8,7 +8,7 @@ obtaining instances of classes `SimWifiP2pInfo` and `SimWifiP2pDeviceList`. Ther
 obtain these classes:
 
    **1. Notified by Termite whenever there are changes in the network:** In this case, instances of these
-classes are passed to the listeners of the broadcast receiver (see [here](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html)).
+classes are passed to the listeners of the broadcast receiver (see [here](Simulating-Groups.html)).
 
    **2. Explicitly requested by the application:** In particular, calling the methods `requestPeers` and
 `requestGroupInfo` of the `SimWifiP2pManager` class. The first method obtains the list of devices that
