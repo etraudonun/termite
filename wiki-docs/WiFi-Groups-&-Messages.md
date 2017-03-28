@@ -1,5 +1,5 @@
 # Lesson 4 - WiFi group formation and message exchange
-In this lesson, we're going to demonstrate how to build Android applications that can set up WiFi groups and exchange messages. In order to do so, we will follow the idea of [lesson 2](Device Detection), and inspect the internals of a demo application called MsgSender. Note that this app extends the functionality of PeerScanner, the demo app from [lesson 2](Device Detection).
+In this lesson, we're going to demonstrate how to build Android applications that can set up WiFi groups and exchange messages. In order to do so, we will follow the idea of [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html), and inspect the internals of a demo application called MsgSender. Note that this app extends the functionality of PeerScanner, the demo app from [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html).
 
 For a visual representation of the interactions involved in this lesson, click [here](https://etraudonun.github.io/termite/group-management.html).
 
@@ -163,6 +163,6 @@ public class MsgSenderActivity extends Activity implements
 }
 ```
 
-Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](Simulating Groups).
+Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
 
-**Note:** If you have yet to configure Termite, we suggest you to visit [lesson 1](Configuring Termite), before moving to [lesson 5](Simulating Groups).
+**Note:** If you have yet to configure Termite, we suggest you to visit [lesson 1](https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html), before moving to [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
