@@ -1,7 +1,7 @@
 # Lesson 4 - WiFi group formation and message exchange
-In this lesson, we're going to demonstrate how to build Android applications that can set up WiFi groups and exchange messages. In order to do so, we will follow the idea of [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html), and inspect the internals of a demo application called MsgSender. Note that this app extends the functionality of PeerScanner, the demo app from [lesson 2](https://etraudonun.github.io/termite/wiki-docs/Device-Detection.html).
+In this lesson, we're going to demonstrate how to build Android applications that can set up WiFi groups and exchange messages. In order to do so, we will follow the idea of [lesson 2](Device-Detection.html), and inspect the internals of a demo application called MsgSender. Note that this app extends the functionality of PeerScanner, the demo app from [lesson 2](Device-Detection.html).
 
-For a visual representation of the interactions involved in this lesson, click [here](https://etraudonun.github.io/termite/group-management.html).
+For a visual representation of the interactions involved in this lesson, click [here](../group-management.html).
 
 ***
 
@@ -131,7 +131,7 @@ public class SendCommTask extends AsyncTask<String, String, Void> {
 }
 ```
 
-   * **Group change listener:** In order for an activity to be notified of group change detections by the Termite dedicated service, it must implement the `GroupInfoListener` interface, more specifically the `void onGroupInfoAvailable(SimWifiP2pDeviceList devices, SimWifiP2pInfo groupInfo)` method. In MsgSender's activity, the method is implemented in a way that displays the new list of devices in the group after the last cast change, through a system dialog. For a detailed description on the information made available by Termite's API, click [here](https://etraudonun.github.io/termite/wiki-docs/Network-Probing.html).
+   * **Group change listener:** In order for an activity to be notified of group change detections by the Termite dedicated service, it must implement the `GroupInfoListener` interface, more specifically the `void onGroupInfoAvailable(SimWifiP2pDeviceList devices, SimWifiP2pInfo groupInfo)` method. In MsgSender's activity, the method is implemented in a way that displays the new list of devices in the group after the last cast change, through a system dialog. For a detailed description on the information made available by Termite's API, click [here](Network-Probing.html).
    
 ```java
 public class MsgSenderActivity extends Activity implements
@@ -163,6 +163,6 @@ public class MsgSenderActivity extends Activity implements
 }
 ```
 
-Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
+Now that you know how an application can set up WiFi groups and exchange messages, try a test interaction in [lesson 5](Simulating-Groups.html).
 
-**Note:** If you have yet to configure Termite, we suggest you to visit <a href="https://etraudonun.github.io/termite/wiki-docs/Termite-Configuration.html">lesson 1</a>, before moving to [lesson 5](https://etraudonun.github.io/termite/wiki-docs/Simulating-Groups.html).
+**Note:** If you have yet to configure Termite, we suggest you to visit <a href="Termite-Configuration.html">lesson 1</a>, before moving to [lesson 5](Simulating-Groups.html).
