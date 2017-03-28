@@ -10,7 +10,7 @@ In case you have yet to meet these two requirements, we advise you to check [les
 ### Virtual network topology and states
 Similarly to [lesson 3](Simulating-Movement.html), the virtual network topology chosen for this example is very simple. It comprises two virtual Android devices (A and B), both of which running the MsgSender application. By the figure bellow we can see that states 1 and 2 are similar to the ones presented in [lesson 3](Simulating-Movement.html), with difference being that here the two nodes are Android devices, i.e., none are WiFi beacons. In State 3, a group is formed between the nodes, being A the group owner (GO). At this point, they are assigned virtual IP addresses and can open regular TCP/IP connections based on their respective virtual IPs.
 
-![](https://github.com/etraudonun/termite/blob/master/wiki-images/two-node-group.png?raw=true)
+![](../wiki-images/two-node-group.png?raw=true)
 
 ### Setup state 2's network topology
 Following the commands presented in [lesson 3](Simulating-Movement.html) create the topology corresponding to state 2 as shown bellow. **Note:** this time, both nodes are Android devices, which means you need to launch two emulators, deploy MsgSender to the both of them, and click the "WiFi On" button again in the both of them.
