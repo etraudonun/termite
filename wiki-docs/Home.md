@@ -37,4 +37,4 @@ At the end of some of the tutorial lessons, we encourage you to try some exercis
 If you want to know how to import the Termite API into your project or how to use the Genymotion connector, click [here](https://etraudonun.github.io/termite/wiki-docs/Useful-Tips.html).
 
 ### FAQ
-For a list of frequently asked questions, click [here](https://etraudonun.github.io/termite/wiki-docs/Faq.html).
+For a list of frequently asked questions, click [here](https://etraudonun.github.io/termite/wiki-docs/Frequently-Asked-Questions.html).
